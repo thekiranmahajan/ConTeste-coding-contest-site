@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Rubik+Iso&family=Ubuntu&display=swap");
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  user-select: none;
+}
+body {
+  width: 100%;
+}
+.container {
+  width: 100%;
+  background-color: #c8ffe0d7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+.navbar {
+  width: 100%;
+  color: aliceblue;
+  background-color: #614bc3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4vw;
+  box-shadow: 0px 6px 10px 0px #000000b8;
+  margin-bottom: 4vw;
+  border-radius: 0vw 0vw 1.5vw 1.5vw;
+}
+.navbar i {
+  cursor: pointer;
+  background-color: #33bbc5;
+  padding: 0.6vw 1vw;
+  border-radius: 0.5vw;
+  display: flex;
+  align-items: center;
+  margin-left: 3vw;
+  font-size: 2.2vw;
+}
+.navbar i h3 {
+  margin-left: 1vmin;
+  font-size: 1.5vw;
+}
+.navbar ul {
+  margin-right: 3vw;
+  display: flex;
+  align-items: center;
+}
+.navbar ul li {
+  list-style: none;
+}
+.navbar ul li:nth-child(1) {
+  background-color: #33bbc5;
+  padding: 0.6vw 0.4vw;
+  border-radius: 0.5vw;
+}
+.navbar ul li:nth-child(1):hover {
+  background-color: #33bbc5dc;
+}
+.navbar ul li a {
+  font-size: 1.1vw;
+  color: aliceblue;
+  text-decoration: none;
+  margin: 3vmin;
+}
+.navbar ul li a:hover {
+  color: #4fe08e;
+}
+#main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.card {
+  overflow: hidden;
+  margin: 1vw 2vw;
+  border-radius: 0.6vw;
+  background-color: #85e6c5;
+  height: 38vw;
+  width: 28vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+}
+.card:hover {
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4);
+}
+.card h2 {
+  font-family: "Ubuntu", sans-serif;
+  margin-top: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0vw 2vw;
+  height: 18vw;
+  color: #7d204dc7;
+}
+.card img {
+  margin-top: 0vw;
+  width: 100%;
+  height: 14vw;
+  border-radius: 0.6vw 0.6vw 0vw 0vw;
+}
+.info {
+  width: 100%;
+  padding: 1vw 3vw;
+  height: 20vw;
+}
+.info p span {
+  /* font-weight: 900; */
+  background-color: #33bbc5;
+  padding: 0.2vw 0.6vw;
+  border-radius: 0.6vw;
+  color: aliceblue;
+  margin-right: 1vw;
+  text-align: center;
+}
+.info p {
+  margin: 0.5vw 0vw;
+
+}
+.card button {
+  outline: none;
+  border: none;
+  padding: 0.4vw 3vw;
+  margin-bottom: 1vw;
+  border-radius: 0.6vw;
+  background-color: #33bbc5;
+  font-size: 1.1vw;
+  transition: transform 0.2s;
+}
+.card button a {
+  text-decoration: none;
+  color: white;
+}
+.card button:active {
+  transform: scale(0.9);
+}
+.card button:hover {
+  background-color: #33bbc5c4;
+}
+footer {
+  display: inline-flex;
+  margin-top: 4vw;
+  text-align: center;
+  color: #f9f9f9;
+  padding: 1vw;
+  background-color: #33bbc5;
+  border-radius: 0.6vw;
+  margin-bottom: 0.5vw;
+}
