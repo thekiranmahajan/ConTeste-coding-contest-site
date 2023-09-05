@@ -19,6 +19,9 @@ body {
   overflow-x: hidden;
 }
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   color: aliceblue;
   background-color: #614bc3;
@@ -70,6 +73,9 @@ body {
   color: #4fe08e;
 }
 #main {
+  position: relative;
+  top: 10vw;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -78,7 +84,7 @@ body {
 .card {
   overflow: hidden;
   margin: 1vw 2vw;
-  border-radius: 0.6vw;
+  border-radius: 0.6vmax;
   background-color: #85e6c5;
   height: 38vw;
   width: 28vw;
@@ -114,7 +120,6 @@ body {
   height: 20vw;
 }
 .info p span {
-  /* font-weight: 900; */
   background-color: #33bbc5;
   padding: 0.2vw 0.6vw;
   border-radius: 0.6vw;
@@ -124,7 +129,6 @@ body {
 }
 .info p {
   margin: 0.5vw 0vw;
-
 }
 .card button {
   outline: none;
@@ -155,4 +159,193 @@ footer {
   background-color: #33bbc5;
   border-radius: 0.6vw;
   margin-bottom: 0.5vw;
+}
+.mobileNavbar {
+  display: none;
+}
+.hamburgerMenu {
+  display: none;
+}
+@media (max-width: 480px) {
+  .navbar ul {
+    display: none;
+  }
+  .navbar {
+    z-index: 100;
+    justify-content: space-between;
+    height: 9vw;
+    box-shadow: 0px 3px 5px 0px #000000b8;
+    margin-bottom: 10vw;
+    border-radius: 0 0 1.5vmax 1.5vmax;
+  }
+  .navbar i {
+    cursor: pointer;
+    padding: 1.5vw 6vw;
+    border-radius: 0.5vmax;
+    font-size: 4vw;
+    margin-left: 15vw;
+  }
+  .navbar i h3 {
+    margin-left: 1vmin;
+    font-size: 2.5vw;
+  }
+  .card {
+    width: 40vw;
+    height: 80vw;
+    margin: 5vw 1vw;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2);
+  }
+  .card img {
+    height: 22vw;
+    border-radius: 0.6vw 0.6vw 0vw 0vw;
+  }
+  .card h2 {
+    padding: 0vw 4vw;
+    height: 19vw;
+    font-size: 3.2vw;
+  }
+  .info {
+    padding: 2vw 3vw;
+    height: 30vw;
+    font-size: 2vw;
+  }
+  .info p span {
+    padding: 0.3vw 0.8vw;
+    margin-right: 1.5vw;
+  }
+  .info p {
+    margin: 1.5vw 0vw;
+  }
+  .card button {
+    padding: 1.2vw 4vw;
+    margin-bottom: 1vw;
+    border-radius: 0.6vmax;
+    font-size: 1.8vw;
+  }
+  footer {
+    margin-top: 10vw;
+    margin-bottom: 2vw;
+    border-radius: 1vw;
+    padding: 1vw 10vw;
+    font-size: 3vw;
+  }
+  .hamburgerMenu {
+    display: block;
+    margin-right: 15vw;
+    width: 6.2vw;
+    cursor: pointer;
+
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+  }
+  .hamburgerMenu .bar,
+  .hamburgerMenu:after,
+  .hamburgerMenu:before {
+    content: "";
+    display: block;
+    width: 100%;
+    background-color: #f9f9f9;
+    height: 0.8vw;
+    margin: 1vw 1vw;
+    transition: 0.4s;
+  }
+  .hamburgerMenu.isActive:before {
+    transform: rotate(-45deg) translate(-2.2vmax, 1.3vmax);
+  }
+  .hamburgerMenu.isActive .bar {
+    opacity: 0;
+  }
+  .hamburgerMenu.isActive:after {
+    transform: rotate(45deg) translate(-0.9vmax, -0.2vmax);
+  }
+  .mobileNavbar {
+    position: fixed;
+    top: 0%;
+    left: 100%;
+    width: 100%;
+    z-index: 98;
+    display: block;
+    min-height: 100vh;
+    background-color: #6d56d2;
+    padding-top: 20vw;
+    overflow: hidden;
+    transition: 0.4s;
+  }
+  .mobileNavbar ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+  }
+  .mobileNavbar ul li {
+    margin: 4vw;
+    background-color: #33bbc5;
+    padding: 1vw 1vw;
+    border-radius: 1vw;
+    transition: transform 0.3s;
+  }
+  .mobileNavbar ul li a {
+    display: inline-block;
+    width: 50vw;
+    text-align: center;
+    padding: 2vw 2vw;
+    text-decoration: none;
+    color: #f9f9f9;
+  }
+  .mobileNavbar ul li a:hover {
+    color: #111213;
+  }
+  .mobileNavbar ul li:hover,
+  .mobileNavbar ul li:active {
+    transform: scale(0.9);
+    background-color: #41bfc89d;
+  }
+  .mobileNavbar.isActive {
+    left: 0%;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .card {
+    width: 40vw;
+    height: 80vw;
+    margin: 5vw 1vw;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2);
+  }
+  .card img {
+    height: 22vw;
+    border-radius: 0.6vw 0.6vw 0vw 0vw;
+  }
+  .card h2 {
+    padding: 0vw 4vw;
+    height: 19vw;
+    font-size: 3.2vw;
+  }
+  .info {
+    padding: 2vw 3vw;
+    height: 30vw;
+    font-size: 2vw;
+  }
+  .info p span {
+    padding: 0.3vw 0.8vw;
+    margin-right: 1.5vw;
+  }
+  .info p {
+    margin: 1.5vw 0vw;
+  }
+  .card button {
+    padding: 1.2vw 4vw;
+    margin-bottom: 1vw;
+    border-radius: 0.6vmax;
+    font-size: 1.8vw;
+  }
+  footer {
+    margin-top: 10vw;
+    margin-bottom: 2vw;
+    border-radius: 1vw;
+    padding: 1vw 10vw;
+    font-size: 3vw;
+  }
 }

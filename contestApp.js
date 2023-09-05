@@ -13,6 +13,12 @@ let images = [
   "https://cdn.pixabay.com/photo/2016/11/19/22/52/coding-1841550_1280.jpg",
   "https://cdn.pixabay.com/photo/2017/03/23/09/34/artificial-intelligence-2167835_1280.jpg",
 ];
+const hamburgerMenu = document.querySelector(".hamburgerMenu");
+const mobileNavbar = document.querySelector(".mobileNavbar");
+hamburgerMenu.addEventListener("click", () => {
+  hamburgerMenu.classList.toggle("isActive");
+  mobileNavbar.classList.toggle("isActive");
+});
 // function for api time format conversion
 const formatDateTime = (apiDateTme) => {
   const date = new Date(apiDateTme); // Passes api's date & time string to js's Date() function
