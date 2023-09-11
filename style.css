@@ -8,20 +8,19 @@
 }
 body {
   width: 100%;
+  min-height: 100%;
 }
 .container {
   width: 100%;
+  min-height: 100%;
   background-color: #c8ffe0d7;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   color: aliceblue;
   background-color: #614bc3;
@@ -73,9 +72,6 @@ body {
   color: #4fe08e;
 }
 #main {
-  position: relative;
-  top: 10vw;
-  left: 0;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -151,8 +147,8 @@ body {
   background-color: #33bbc5c4;
 }
 footer {
-  display: inline-flex;
-  margin-top: 4vw;
+  /* display: inline-flex; */
+  /* margin-top: 4vw; */
   text-align: center;
   color: #f9f9f9;
   padding: 1vw;
@@ -167,13 +163,21 @@ footer {
   display: none;
 }
 @media (max-width: 480px) {
+  #main {
+    position: relative;
+    top: 10vw;
+    left: 0;
+  }
   .navbar ul {
     display: none;
   }
   .navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
     z-index: 100;
     justify-content: space-between;
-    height: 9vw;
+    height: 14vw;
     box-shadow: 0px 3px 5px 0px #000000b8;
     margin-bottom: 10vw;
     border-radius: 0 0 1.5vmax 1.5vmax;
@@ -252,13 +256,13 @@ footer {
     transition: 0.4s;
   }
   .hamburgerMenu.isActive:before {
-    transform: rotate(-45deg) translate(-2.2vmax, 1.3vmax);
+    transform: rotate(-45deg) translate(-3px, 6px);
   }
   .hamburgerMenu.isActive .bar {
     opacity: 0;
   }
   .hamburgerMenu.isActive:after {
-    transform: rotate(45deg) translate(-0.9vmax, -0.2vmax);
+    transform: rotate(45deg) translate(-2px, -5px);
   }
   .mobileNavbar {
     position: fixed;
@@ -269,7 +273,7 @@ footer {
     display: block;
     min-height: 100vh;
     background-color: #6d56d2;
-    padding-top: 20vw;
+    padding-top: 30vw;
     overflow: hidden;
     transition: 0.4s;
   }
@@ -283,7 +287,7 @@ footer {
   .mobileNavbar ul li {
     margin: 4vw;
     background-color: #33bbc5;
-    padding: 1vw 1vw;
+    padding: 1vmin 1vmin;
     border-radius: 1vw;
     transition: transform 0.3s;
   }
@@ -341,11 +345,39 @@ footer {
     border-radius: 0.6vmax;
     font-size: 1.8vw;
   }
-  footer {
-    margin-top: 10vw;
-    margin-bottom: 2vw;
-    border-radius: 1vw;
-    padding: 1vw 10vw;
+}
+@media (min-width: 768px) {
+  .card {
+    width: 28vw;
+    height: 70vw;
+    margin: 5vw 1vw;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2);
+  }
+  .card img {
+    height: 18vw;
+    border-radius: 0.6vw 0.6vw 0vw 0vw;
+  }
+  .card h2 {
+    padding: 0vw 4vw;
+    height: 15vw;
     font-size: 3vw;
+  }
+  .info {
+    padding: 2vw 2vw;
+    height: 28vw;
+    font-size: 1.5vw;
+  }
+  .info p span {
+    padding: 0.2vw 0.4vw;
+    margin-right: 1.2vw;
+  }
+  .info p {
+    margin: 2vw 0vw;
+  }
+  .card button {
+    padding: 1vw 4vw;
+    margin-bottom: 1vw;
+    border-radius: 0.6vmax;
+    font-size: 1.3vw;
   }
 }
